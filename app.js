@@ -51,6 +51,9 @@ function generate(){
     }
 
     if (lowerCase === true && upperCase === true && numbersPW === true && symbolsPW === true) {
+        for(var i = 0; i <= complexity; i++){
+            password = password + upperCaseString.charAt(Math.floor(Math.random() * Math.floor(upperCaseString.length - 1))) + lowerCaseString.charAt(Math.floor(Math.random() * Math.floor(lowerCaseString.length - 1))) + numbersString.charAt(Math.floor(Math.random() * Math.floor(numberString.length - 1))) + symbolsString.charAt(Math.floor(Math.random() * Math.floor(symbolsString.length - 1)));
+        }
         
     } else if (lowerCase === false && upperCase === true && numbersPW === true && symbolsPW === true) {
 
@@ -87,25 +90,30 @@ function generate(){
 
     // set password length/complexity
     
+    function myPassword() {}
     
-    //let complexity = document.getElementById("slider").value;
+    let complexity = document.getElementById("slider").value;
     // possible password values
     //let values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+    
+    // put all else if statments inside function along with other variables?
+    
     let upperCaseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let lowerCaseString = "abcdefghijklmnopqrstuvwxyz";
     let numbersString = "0123456789";
     let symbolsString = "!@#$%^&*()_+";
+    
     // put the lowercase, uppercase, symbols into different arrays
     let password = "";
 
     // create for loop to choose password characters
-    for(var i = 0; i <= complexity; i++){
+    /*for(var i = 0; i <= complexity; i++){
         password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-    }
+    }*/
 
     //add password to text box/display area
     document.getElementById("display").value = password;
 
     //add password to previously generated passwords section
-    document.getElementsByClassName("lastNums").innerHTML += password + "<br>";
+    //document.getElementsByClassName("lastNums").innerHTML += password + "<br>";
 }
