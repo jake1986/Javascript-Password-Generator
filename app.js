@@ -3,13 +3,13 @@
 // generate random password
 function generate(){ prompt("Would you like a new password?")
 
-    let answer1;
+    let answer1 = 'yes';
 
     if (answer1 === 'yes'){
         prompt("You may choose a password of a minimum of 8 characters and a maximum of 128 characters. How many characters would you like?")
     } else {
         prompt("A new password will not be generated");
-    }
+    };
    
     // set password length/complexity
     let complexity = document.getElementById("slider").value;
