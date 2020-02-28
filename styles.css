@@ -47,9 +47,16 @@ input {
     font-size: 20px;
     font-weight: bolder;
     margin-left: 35%;
-    position: relative;
-    left: 80px;
 }
+
+.btn-warning {
+    color: white;
+}
+.btn-cl {
+   position: relative;
+   right: 350px;
+}
+
 .btn:hover {
     opacity: 0.7;
 }
